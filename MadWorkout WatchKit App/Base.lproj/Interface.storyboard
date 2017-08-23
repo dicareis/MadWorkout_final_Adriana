@@ -1,15 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MadWorkout_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="7" alignment="left" id="Luo-0n-Nte"/>
+                        <imageView alignment="left" image="logo" id="6CA-Oh-6Px"/>
+                        <group width="1" height="7" alignment="left" id="VPR-jx-Zws"/>
+                        <table alignment="left" id="YLd-Yg-30p">
+                            <items>
+                                <tableRow identifier="row" id="Equ-nI-nlA" customClass="TableRowController" customModule="MadWorkout_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="PFy-aD-XYM">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Dates" id="OZl-9Y-Zua">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dates" destination="OZl-9Y-Zua" id="c1b-jG-f73"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" height="46" alignment="left" id="ALZ-Ed-CSg"/>
+                    </items>
+                    <color key="backgroundColor" red="0.24705882352941178" green="0.36078431372549019" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="table" destination="YLd-Yg-30p" id="UoW-vH-Sbk"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="33" y="64"/>
+        </scene>
+        <!--page2-->
+        <scene sceneID="NXm-1z-y8E">
+            <objects>
+                <controller identifier="page2" id="TsW-mu-tUg" customClass="WorkoutController" customModule="MadWorkout_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="9" alignment="left" id="UBi-zj-9JL"/>
+                        <imageView alignment="left" image="logo" id="O0t-G8-UDd"/>
+                        <group width="1" height="6" alignment="left" id="JaS-SG-lBg"/>
+                        <label width="127" alignment="center" text="Label" textAlignment="left" numberOfLines="100" id="I5c-ze-fea">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                    </items>
+                    <color key="backgroundColor" red="0.24705882352941178" green="0.36078431372549019" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="I5c-ze-fea" id="pgX-e6-5WD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="238" y="64"/>
         </scene>
     </scenes>
 </document>
